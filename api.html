@@ -7,14 +7,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
+            var apiData = {};
             $.getJSON("https://api.ipify.org?format=json", function(e) {
-                $("#ip").text(e.ip);
+                apiData["IP"] = e.ip;
+            }).then(function() {
+                $("#data").text(apiData.toString());
             });
         });
     </script>
 </head>
 
 <body>
-    <p id="ip"></p>
+    <div id="data">
+
+    </div>
 </body>
 </html>
