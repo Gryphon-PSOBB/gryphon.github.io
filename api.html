@@ -6,13 +6,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function() {
-            var apiData = {};
-            $.getJSON("https://api.ipify.org?format=json", function(e) {
-                apiData["IP"] = e.ip;
-            }).then(function() {
-                $("#data").text($.toJSON(apiData));
-            });
+        $(document).ready(async function() {
+            var apiData = {
+                "IP": await jQuery.getJSON("https://api.ipify.org?format=json").ip,
+            };
+
+
+            $("#data").text($.toJSON(apiData));
         });
     </script>
 </head>
