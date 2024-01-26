@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Phantasy Star Online: Blue Burst (Gryphon)</title>
+    <title>Gryphon Static API</title>
 </head>
 
 <body>
-    <p>API Page</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+        $.getJSON("https://api.ipify.org?format=json", function(e) {
+            console.log(e.ip);
+        });
+    </script>
+    <p>
+        API Page
+    </p>
 </body>
 </html>
