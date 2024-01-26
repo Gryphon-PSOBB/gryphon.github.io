@@ -11,8 +11,7 @@
                 "IP": await jQuery.getJSON("https://api.ipify.org?format=json").ip,
             };
 
-
-            $("#data").text($.toJSON(apiData));
+            $("#data").text(JSON.stringify(apiData));
         });
     </script>
 </head>
