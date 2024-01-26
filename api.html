@@ -11,7 +11,7 @@
             $.getJSON("https://api.ipify.org?format=json", function(e) {
                 apiData["IP"] = e.ip;
             }).then(function() {
-                $("#data").text(apiData.toString());
+                $("#data").text($.toJSON(apiData));
             });
         });
     </script>
